@@ -11,6 +11,7 @@
     <modules>
         <module>spark-template</module>
         <module>sparklivy-submitter-template</module>
+        <module>flink-template</module>
     </modules>
 
 

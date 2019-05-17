@@ -1,7 +1,7 @@
 package io.qkits.sparklivy;
 
-import com.bkjk.credit.testsupport.submitter.config.SparkJobConfig;
-import com.bkjk.credit.testsupport.submitter.utils.JsonUtil;
+import io.qkits.sparklivy.config.SparkJobConfig;
+import io.qkits.sparklivy.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -38,6 +38,7 @@ public class LivyTaskSubmitHelper {
 
     /**
      * 初始化Livy 访问请求的RequestBody字段
+     *
      * @param config
      * @return
      */
@@ -53,6 +54,7 @@ public class LivyTaskSubmitHelper {
 
     /**
      * create spark batch job through livy post:/batches
+     *
      * @param config
      * @return batch api response
      */
@@ -75,6 +77,7 @@ public class LivyTaskSubmitHelper {
 
     /**
      * build default livy header
+     *
      * @return
      */
     private HttpHeaders buildLivyHeader() {
@@ -86,13 +89,14 @@ public class LivyTaskSubmitHelper {
 
     /**
      * get batch status
+     *
      * @param id
      * @param config
      * @return
      */
     public Map<String, Object> getBatchStatus(String id, SparkJobConfig config) {
-        String getBatchURI = config.getLivyUri()+"/"+id;
-        log.info("request_uri =",getBatchURI);
+        String getBatchURI = config.getLivyUri() + "/" + id;
+        log.info("request_uri =", getBatchURI);
         return restTemplate.getForObject(getBatchURI, Map.class);
 
     }

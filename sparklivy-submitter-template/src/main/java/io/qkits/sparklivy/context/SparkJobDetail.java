@@ -1,6 +1,6 @@
 package io.qkits.sparklivy.context;
 
-import com.bkjk.credit.testsupport.submitter.config.SparkJobConfig;
+import io.qkits.sparklivy.config.SparkJobConfig;
 import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;

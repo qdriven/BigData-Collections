@@ -1,10 +1,10 @@
 package io.qkits.sparklivy;
 
-import com.bkjk.credit.testsupport.submitter.config.SparkJobConfig;
-import com.bkjk.credit.testsupport.submitter.context.SparkJobDetail;
-import com.bkjk.credit.testsupport.submitter.exception.SparkJobNotCompletedException;
-import com.bkjk.credit.testsupport.submitter.exception.SparkJobSubmitException;
-import com.bkjk.credit.testsupport.submitter.livy.LivySessionStates;
+import io.qkits.sparklivy.config.SparkJobConfig;
+import io.qkits.sparklivy.context.SparkJobDetail;
+import io.qkits.sparklivy.exception.SparkJobNotCompletedException;
+import io.qkits.sparklivy.exception.SparkJobSubmitException;
+import io.qkits.sparklivy.livy.LivySessionStates;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -148,7 +148,7 @@ public class SparkJobSubmitter {
             e.printStackTrace();
         }
         throw new SparkJobNotCompletedException("spark batch job is created, but not finished yet, " +
-                "the result will be sent to you serveral minutes later");
+                "the result will be sent to you several minutes later");
     }
 
     public void submitJob(SparkJobConfig config) {
