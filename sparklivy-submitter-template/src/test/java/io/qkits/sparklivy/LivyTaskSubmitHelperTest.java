@@ -1,8 +1,5 @@
 package io.qkits.sparklivy;
 
-import com.bkjk.credit.testsupport.submitter.config.SparkJobConfig;
-import com.bkjk.credit.testsupport.submitter.config.SparkJobConfigs;
-import com.bkjk.credit.testsupport.submitter.livy.LivySessionStates;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.assertj.core.api.Assertions;
